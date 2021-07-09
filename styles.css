@@ -1,0 +1,37 @@
+/*
+sintaxis css
+selector {
+    propiedad: valor;
+    propiedad: valor;
+    propiedad: valor;
+}
+*/
+
+/*Selector tagname*/
+h1, h2 {
+    display: inline;
+    width: 400px;
+}
+
+h3 {
+    font-weight: lighter;
+}
+
+div {
+    background-color: lightsalmon;
+}
+
+/*la sintaxis para referirme a un elemento por id es con #*/
+#div1 {
+    background-color: lightgray;
+}
+
+/*por class*/
+.cl1 {
+    background-color: lightyellow;
+}
+
+/* el selector universal es un asterisco y con > indicas que los hijos directos del elemento que quieres seleccionar, aquí aplica la especificidad*/
+
+
+
