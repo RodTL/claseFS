@@ -1,40 +1,164 @@
-/*
-sintaxis css
-selector {
-    propiedad: valor;
-    propiedad: valor;
-    propiedad: valor;
-}
-*/
-
-/*Selector tagname*/
-/*
-h1, h2 {
-    display: inline;
-    width: 400px;
+* {
+  margin: 0;
 }
 
-h3 {
-    font-weight: lighter;
+body {
+  /*background-image: url("background.jpg");*/
+  background-color: #1c222a;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: hidden;
 }
 
-div {
-    background-color: lightsalmon;
-}
-*/
-/*la sintaxis para referirme a un elemento por id es con #*/
-/*
-#div1 {
-    background-color: lightgray;
-}
-*/
-/*por class*/
-/*
-.cl1 {
-    background-color: lightyellow;
-}
-*/
-/* el selector universal es un asterisco y con > indicas que los hijos directos del elemento que quieres seleccionar, aquí aplica la especificidad*/
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
+  background-color: black;
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 160px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll)*/
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
 
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
 
+/* estilo de las opciones en la barra */
+.sidebar a {
+  background-color: black;
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 1rem;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+/* cambiar color sobre el hover */
+.sidebar a:hover {
+  background-color: #323142;
+  color: white;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+}
+
+/* Style page content */
+main {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+section {
+  height: 100vh; /*this makes the section size as big as the viewport height*/
+  color: whitesmoke;
+}
+
+#yoc1 {
+  float: left;
+  width: 20%;
+  min-width: 320px;
+}
+
+#yoc2 {
+  float: right;
+  width: 65%;
+}
+
+#profilepic {
+  display: block;
+  max-width: 100%;
+  max-height: 50%;
+  padding: 15% 15% 5% 15%;
+  border-radius: 25%;
+}
+
+.contact img {
+  height: 3rem;
+  /*margin-top: 1rem;*/
+}
+
+.contact p {
+  display: inline;
+  font-size: 1.5rem;
+}
+
+.contact a {
+  display: inline;
+}
+
+.info {
+  margin-left: 10%;
+}
+
+.info p {
+  height: 50%; /*cómo centrarlo verticalmente?*/
+  font-size: 1.2rem;
+  margin-left: 1rem;
+}
+
+.info > * {
+  display: block;
+  height: 2.5rem;
+  margin-top: 2rem;
+}
+
+.social {
+  margin-top: 5rem;
+  margin-left: 50%;
+}
+
+.social a {
+  display: inline;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+#fullname {
+  font-size: 5rem;
+  font-family: helvetica;
+  padding-top: 3rem;
+  color: rgb(211, 211, 211);
+}
+
+#mydesc {
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10rem 15rem 0 0;
+  text-align: justify;
+  color: rgb(155, 155, 160);
+  width: 80%;
+}
+
+#mech {
+  display: block;
+  max-width: 30%;
+  float: right;
+  transform: rotateY(180deg);
+}
+
+#profesional {
+  font-size: 10rem;
+}
+
+#hobbies {
+  font-size: 10rem;
+}
+
+#educacion {
+  font-size: 10rem;
+}
